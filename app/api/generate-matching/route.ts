@@ -1,7 +1,7 @@
 import { google } from "@ai-sdk/google";
 import { streamObject } from "ai";
 
-import { questionSchema } from "@/lib/schemas";
+import { matchingSchema } from "@/lib/schemas";
 
 export const maxDuration = 60;
 
@@ -15,14 +15,14 @@ export async function POST(req: Request) {
       {
         role: "system",
         content:
-          "You are a teacher. Your job is to take a document, and 4 quiz options (with 4 questions) based on the content of the document. Each option should be roughly equal in length.",
+          "You are a teacher. Your job is to take a document, and create a matching quiz (with 4 questions) based on the content of the document. Each option should be roughly equal in length.",
       },
       {
         role: "user",
         content: [
           {
             type: "text",
-            text: "Create a multiple choice test based on this document.",
+            text: "Create a matching choice test based on this document.",
           },
           {
             type: "file",
@@ -32,11 +32,12 @@ export async function POST(req: Request) {
         ],
       },
     ],
-    schema: questionSchema,
+    schema: matchingSchema,
     output: "array",
     onFinish: ({ object }) => {
-      const res = questionSchema.safeParse(object);
+      const res = matchingSchema.safeParse(object);
       if (res.error) {
+        console.error(res.error);
         throw new Error(res.error.errors.map((e) => e.message).join("\n"));
       }
     },

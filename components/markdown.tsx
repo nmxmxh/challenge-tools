@@ -14,10 +14,7 @@ export const NonMemoizedMarkdown = ({ children }: { children: string }) => {
           <code className={match[1]}>{children}</code>
         </pre>
       ) : (
-        <code
-          className={`${className} text-sm bg-zinc-100 dark:bg-zinc-800 py-0.5 px-1 rounded`}
-          {...props}
-        >
+        <code className={`${className} text-sm bg-zinc-100 dark:bg-zinc-800 py-0.5 px-1 rounded`} {...props}>
           {children}
         </code>
       );

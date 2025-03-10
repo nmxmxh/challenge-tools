@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint --max-warnings=0 \"app/**/*.{ts,tsx}\" \"lib/**/*.{ts,tsx}\" \"styles/**/*.{ts,tsx}\" \"types/**/*.{ts,tsx}\" --fix",
+    "prettier": "prettier check \"**/*{js,jsx,json,ts,tsx,yaml}\"",
+    "prettier-fix": "prettier --write \"**/*{js,jsx,json,ts,tsx,yaml}\"",
+    "format": "npm run lint && npm run prettier-fix",
+    "ts": "tsc --noEmit --incremental"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^1.0.5",
@@ -23,6 +27,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.14.1",
+    "lodash": "^4.17.21",
     "lucide-react": "^0.468.0",
     "next": "15.1.0",
     "next-themes": "^0.4.4",
@@ -31,17 +36,29 @@
     "react-markdown": "^9.0.1",
     "remark-gfm": "^4.0.0",
     "sonner": "^1.7.1",
+    "styled-components": "^6.1.15",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.24.1"
+    "zod": "^3.24.1",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.0",
+    "@eslint/js": "^9.22.0",
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
     "eslint": "^9.16.0",
     "eslint-config-next": "15.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-storybook": "^0.8.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "postcss": "^8.4.49",
+    "prettier": "^3.3.3",
     "tailwindcss": "^3.4.16",
     "typescript": "^5.7.2"
   }

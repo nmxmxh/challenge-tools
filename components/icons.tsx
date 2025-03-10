@@ -1,12 +1,6 @@
 export const BotIcon = () => {
   return (
-    <svg
-      height="16"
-      strokeLinejoin="round"
-      viewBox="0 0 16 16"
-      width="16"
-      style={{ color: "currentcolor" }}
-    >
+    <svg height="16" strokeLinejoin="round" viewBox="0 0 16 16" width="16" style={{ color: "currentcolor" }}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -39,13 +33,7 @@ export const UserIcon = () => {
 
 export const AttachmentIcon = () => {
   return (
-    <svg
-      height="16"
-      strokeLinejoin="round"
-      viewBox="0 0 16 16"
-      width="16"
-      style={{ color: "currentcolor" }}
-    >
+    <svg height="16" strokeLinejoin="round" viewBox="0 0 16 16" width="16" style={{ color: "currentcolor" }}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -77,32 +65,15 @@ export const AttachmentIcon = () => {
 
 export const VercelIcon = ({ size = 18 }: { size: number }) => {
   return (
-    <svg
-      height={size}
-      strokeLinejoin="round"
-      viewBox="0 0 16 16"
-      width={size}
-      style={{ color: "currentcolor" }}
-    >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M8 1L16 15H0L8 1Z"
-        fill="currentColor"
-      ></path>
+    <svg height={size} strokeLinejoin="round" viewBox="0 0 16 16" width={size} style={{ color: "currentcolor" }}>
+      <path fillRule="evenodd" clipRule="evenodd" d="M8 1L16 15H0L8 1Z" fill="currentColor"></path>
     </svg>
   );
 };
 
 export const GitIcon = () => {
   return (
-    <svg
-      height="16"
-      strokeLinejoin="round"
-      viewBox="0 0 16 16"
-      width="16"
-      style={{ color: "currentcolor" }}
-    >
+    <svg height="16" strokeLinejoin="round" viewBox="0 0 16 16" width="16" style={{ color: "currentcolor" }}>
       <g clipPath="url(#clip0_872_3147)">
         <path
           fillRule="evenodd"
