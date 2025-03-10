@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
-import { ChevronLeft, ChevronRight, Check, X, RefreshCw, FileText } from "lucide-react";
-import QuizScore from "./score";
-import QuizReview from "./quiz-overview";
-import { Question } from "@/lib/schemas";
+import { AnimatePresence, motion } from "framer-motion";
+import { Check, ChevronLeft, ChevronRight, RefreshCw, X } from "lucide-react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+
+import { Button } from "@/components/ui/button";
+import type { Question } from "@/lib/schemas";
+
+import QuizReview from "./quiz-overview";
+import QuizScore from "./score";
 
 type QuizProps = {
   questions: Question[];
@@ -57,7 +58,7 @@ export default function Quiz({ questions }: QuizProps) {
   const [answers, setAnswers] = useState<string[]>(Array(questions.length).fill(null));
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [score, setScore] = useState<number | null>(null);
-  const [progress, setProgress] = useState(0);
+  const [, setProgress] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {

@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface CardType {
   id: string;
@@ -41,7 +43,7 @@ function MatchGame({ matching }: { matching: any[] }) {
     const shuffledCards = shuffleArray([...questionCards, ...answerCards]);
     setCards(shuffledCards);
     setStartTime(Date.now());
-  }, []);
+  }, [matching]);
 
   useEffect(() => {
     const interval = setInterval(() => {

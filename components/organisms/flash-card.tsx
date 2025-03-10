@@ -1,6 +1,6 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import styled from "styled-components";
-import { motion, AnimatePresence } from "framer-motion";
 
 // Styled Components
 const Container = styled.div`
@@ -87,6 +87,7 @@ const NavButton = styled.button`
   }
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const FlashcardView = ({ flashcards }: any) => {
   const [current, setCurrent] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);

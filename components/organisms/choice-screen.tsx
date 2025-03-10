@@ -9,6 +9,7 @@ const modes = [
   { id: "yes-no", label: "Yes or No" },
 ];
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ChoiceScreen = ({ onSelectMode }: any) => {
   return (
     <Container>

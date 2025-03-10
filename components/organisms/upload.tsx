@@ -1,9 +1,7 @@
-import { useGenerateQuiz } from "@/lib/hooks/useGenerateQuiz";
-import { AnimatePresence, motion } from "framer-motion";
-import { FileUp, Plus, Loader2 } from "lucide-react";
-import { Button } from "../ui/button";
-import styled from "styled-components";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { FileUp } from "lucide-react";
 import { useRef } from "react";
+import styled from "styled-components";
 
 export default function Upload({ handleFileChange, handleSubmitWithFiles, files, isLoading }: any) {
   const inputRef = useRef<HTMLInputElement>(null);
